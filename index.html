@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts About Sri Lanka and Business</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        li img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+
+        <h1>Facts About Business</h1>
+        <ul id="business-facts">
+            <!-- Facts will be loaded here by JavaScript -->
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+
+            const businessFacts = [
+                { text: "Businesses are the backbone of the global economy.", icon: "🌐" },
+                { text: "Entrepreneurship drives business development.", icon: "🚀" },
+                { text: "Various business structures like LLCs and corporations.", icon: "🏢" },
+                { text: "E-commerce is a major sales channel.", icon: "🛒" },
+                { text: "Growing emphasis on sustainability.", icon: "♻️" },
+                { text: "Technological advancements drive innovation.", icon: "💡" },
+                { text: "Businesses operate in a globalized environment.", icon: "🌍" },
+                { text: "Effective marketing and branding are essential.", icon: "📈" },
+                { text: "Sound financial management is critical.", icon: "💰" },
+                { text: "Businesses must navigate regulations and compliance.", icon: "⚖️" }
+            ];
+
+           
+            const businessFactsList = document.getElementById('business-facts');
+
+           
+
+            businessFacts.forEach(fact => {
+                const li = document.createElement('li');
+                li.innerHTML = `<img src="https://via.placeholder.com/40" alt="icon">${fact.icon} ${fact.text}`;
+                businessFactsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
